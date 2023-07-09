@@ -1,23 +1,14 @@
-import logo from './logo.svg';
+import wineData from './Assets/Wine-Data.json';
+import FlavanoidsData from './Component/FlavanoidsData';
+import DisplayGammaData from './Component/DisplayGammaData';
 import './App.css';
-
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <h1>Wine Data</h1>
+      <FlavanoidsData wineData={wineData}/>
+      <h1>Wine Data - Gamma</h1>
+      <DisplayGammaData wineData = {wineData} />
     </div>
   );
 }
